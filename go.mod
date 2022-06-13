@@ -1,4 +1,4 @@
-module updir
+module github.com/isgj/updir
 
 go 1.18
 
