@@ -20,8 +20,7 @@ jobs:
         run: go build -tags urfave_cli_no_docs -o updir
       - name: Create Release and upload build
         run: |
-          gh release create ${{ github.ref }} --generate-notes
-          sleep 3
-          gh release upload ${{ github.ref }} updir
+          gh release create ${{ github.ref_name }} --generate-notes
+          gh release upload ${{ github.ref_name }} updir
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
